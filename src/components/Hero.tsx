@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play, Users, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 export const Hero = () => {
@@ -32,9 +33,11 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="group">
-                Start Connecting
-                <Users className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              <Button variant="hero" size="lg" className="group" asChild>
+                <Link to="/signup">
+                  Start Connecting
+                  <Users className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                </Link>
               </Button>
               <Button variant="glass" size="lg" className="group">
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
